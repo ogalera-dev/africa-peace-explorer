@@ -7,7 +7,7 @@ var stroke_with_selection = 3.5;
 
 var svg = null;
 var countries = null;
-let color = d3.scaleSequential().interpolator(d3.interpolateGreens);
+let color = d3.scaleSequential().interpolator(d3.interpolateGnBu);
 
 var width = 0;
 var height = 0;
@@ -87,10 +87,14 @@ function create(document_id, map_size, data, select_country){
     });
 }
 
+var i = 2;
+
 function buildLegend(){
+    svg.select('.legend').remove();
+
     legend = d3.legendColor()
         .shapeWidth(width / 10)
-        .cells(9)
+        .cells(Math.min(8,Math.max(2, Math.ceil(d3.max(Object.values(countries))/5)+1)))
         .orient("horizontal")
         .labelOffset(10)
         .ascending(true)
@@ -106,7 +110,7 @@ function buildLegend(){
 
     svg.append("g")
         .attr("class", "legend")
-        .attr("transform", "translate(" + (width / 24) + "," + (height * 6 / 7) + ")")
+        .attr("transform", "translate(" + (width / 50) + "," + (height * 6 / 7) + ")")
         .call(legend);
 }
 
@@ -169,20 +173,7 @@ function filterCountries(countries_selected){
             return color(0);
         });
 
-    //if(num_bins_legend > 1.0){
-        //legend.cells(Math.ceil(num_bins_legend));
-        //legend.cells(Math.ceil(d3.max(Object.values(countries))/5)+1);
-        //legend.cells(4).scale(color);
-    
-        legend.cells(4).scale(color);
-
-        svg.select(".legend").call(legend);
-        //    .style('visibility', 'visible')
-        //    .call(legend);
-    //} else {
-    //    svg.select('.legend').style('visibility', 'hidden');
-        //legend.style('visible', 'hidden');
-    //}
+    buildLegend();
     
 }
 

@@ -3,9 +3,9 @@ var height = 0;
 
 
 var last_year_selected = null;
-var color_bar_no_selection = '#aa0000';
-var color_bar_selection_others = '#DCA1A1';
-var color_bar_selection = '#7E0202';
+var color_bar_no_selection = '#12BCB2';
+var color_bar_selection_others = '#CCE1E0';
+var color_bar_selection = '#147E78';
 var stroke_with_no_selection = 1;
 var stroke_with_selection = 3;
 
