@@ -1,0 +1,144 @@
+body{
+    font-family: 'sans-serif';
+}
+
+#document-list {
+    padding: 25px;
+    border-right: 1px solid;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    overflow: auto;
+}
+
+#document-wc{
+    position: absolute;
+    top: 0;
+    bottom: 400px;
+    left: 400px;
+    right: 500px;
+    background-color:  #FFFFFF;
+}
+
+#document-wc #text{
+    display: inline-block;
+    font-size: 4.5em;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    position: absolute;
+    margin-top: -60px;
+}
+
+#document-wc #path {
+    left: 10px;
+    top: 10px;
+    position: absolute;
+    display: inline-block;
+}
+
+#document-map{
+    border-left: 1px solid;
+    position: absolute;
+    top: 0;
+    bottom: 400px;
+    right: 0;
+    width: 600px;
+    background-color: #F1F1F1;
+}
+
+#document-map svg{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 400px;
+}
+
+#document-time{
+    border-top: 1px solid;
+    position: absolute;
+    bottom: 0;
+    left: 400px;
+    right: 0;
+    height: 400px;
+    background-color:#F1F1F1;
+}
+
+#no-data-time{
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    font-size: 4em;
+    margin-top: auto;
+    top: 0;
+    width: 100%;
+    top: 50%;
+    position: absolute;
+    margin-top: -60px;
+    visibility: hidden;
+}
+
+#document-time svg{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#document-list .title{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#document-list label{
+    width: 100%;
+    border: 1px solid;
+    padding: 8px 13px;
+    border-radius: 8px;
+}
+
+.creative-commons {
+    position:absolute;
+    bottom: 5px;
+    right: 10px;
+    z-index: 1;
+}
+
+.country-name{
+    visibility: hidden;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 60px;
+}
+
+#screen-out{
+    visibility: hidden;
+    margin-top: 40%;
+    text-align: center;
+}
+
+#warn1{
+    font-size: 5em;
+}
+
+#warn2{
+    font-size: 3em;
+    color: #aaa;
+}
+
+#document-wc .loading-data{
+    display: none;
+    position: absolute;
+    text-align: center;
+    font-size: 3em;
+    left: 0;
+    right: 0;
+    top: 40%;
+    bottom: 0;
+}
+
+#document-wc .spinner-border{
+    width: 5rem;
+    height: 5rem;
+}
